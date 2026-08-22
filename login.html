@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in | PID Facilities</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#17212b;--muted:#6e7880;--line:#dce3df;--gold:#d98c2b;--paper:#fbfcfa;--navy:#17232c;--font-display:'Space Grotesk',sans-serif;--font-body:'DM Sans',sans-serif}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:#dfe8e2;color:var(--ink);font-family:var(--font-body);display:grid;place-items:center;padding:28px}
+    .login-shell{width:min(1060px,100%);min-height:650px;background:var(--paper);display:grid;grid-template-columns:1.05fr .95fr;border-radius:18px;overflow:hidden;box-shadow:0 28px 70px #17232c35;border:1px solid #ffffffaa}
+    .visual{position:relative;isolation:isolate;min-height:650px;padding:38px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;background:linear-gradient(160deg,#1a2a31cc,#17232cee),url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85') center/cover}
+    .visual:after{content:'';position:absolute;z-index:-1;inset:auto 0 0;height:42%;background:linear-gradient(transparent,#17232cf5)}
+    .brand{display:flex;align-items:center;gap:12px}.brand-mark{width:48px;height:48px;border-radius:10px;object-fit:contain;background:#fff;padding:3px;box-shadow:0 5px 16px #08111745}.brand-name{font-family:var(--font-display);font-size:16px;font-weight:700;letter-spacing:.1px}.brand-sub{display:block;color:#d8e0dc;font-size:10px;letter-spacing:1.1px;text-transform:uppercase;margin-top:2px}
+    .visual-copy{max-width:390px}.eyebrow{color:#f4b65d;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;font-weight:700;margin-bottom:12px}.visual h2{font-family:var(--font-display);font-size:clamp(30px,4vw,48px);line-height:1.04;letter-spacing:0;margin:0 0 16px}.visual-copy p{color:#dce5e1;font-size:14px;line-height:1.7;margin:0}.status-line{display:flex;align-items:center;gap:9px;color:#e8efeb;font-size:12px}.status-dot{width:8px;height:8px;border-radius:50%;background:#63c49a;box-shadow:0 0 0 5px #63c49a25}
+    .form-panel{padding:clamp(32px,6vw,74px) clamp(28px,6vw,70px);display:flex;align-items:center}.form-inner{width:100%;max-width:350px;margin:auto}.kicker{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:1.7px;text-transform:uppercase;margin-bottom:14px}.form-panel h1{font-family:var(--font-display);font-size:34px;line-height:1.1;letter-spacing:0;margin:0 0 10px}.intro{color:var(--muted);font-size:14px;line-height:1.6;margin:0 0 32px}.field{margin:0 0 19px}.field label{display:block;color:#526069;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px}.field input{width:100%;height:48px;padding:0 13px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font:inherit;font-size:14px;transition:border-color .2s,box-shadow .2s}.field input:focus{outline:0;border-color:var(--gold);box-shadow:0 0 0 4px #d98c2b20}.submit{width:100%;height:48px;border:0;border-radius:8px;padding:0 16px;background:var(--navy);color:#fff;font:600 14px var(--font-body);cursor:pointer;transition:transform .2s,background .2s;box-shadow:0 8px 16px #17232c20}.submit:hover{background:#263945;transform:translateY(-1px)}.submit span{margin-left:8px;color:#f4b65d}.error{min-height:20px;margin:13px 0 0;color:#c1443c;font-size:12px}.security-note{display:flex;align-items:flex-start;gap:9px;border-top:1px solid var(--line);margin-top:32px;padding-top:18px;color:#87918f;font-size:11px;line-height:1.5}.security-icon{color:var(--gold);font-size:14px;line-height:1}
+    .contact{margin-top:20px;color:#7d8885;font-size:11px;line-height:1.7}.contact strong{color:#53615e;font-weight:600}.contact a{color:#a96718;text-decoration:none}.contact a:hover{text-decoration:underline}
+    @media(max-width:720px){body{padding:0}.login-shell{min-height:100vh;display:block;border-radius:0;border:0}.visual{min-height:245px;padding:26px 24px}.visual-copy{display:none}.status-line{font-size:11px}.form-panel{min-height:calc(100vh - 245px);padding:44px 26px}.form-panel h1{font-size:30px}}
+  </style>
+</head>
+<body>
+  <main class="login-shell">
+    <section class="visual" aria-label="Facilities management">
+      <div class="brand"><img class="brand-mark" src="logo.png" alt="PID Facilities logo"><div><div class="brand-name">PID Facilities</div><span class="brand-sub">Management System</span></div></div>
+      <div class="visual-copy"><div class="eyebrow">Operations, in view</div><h2>Keep every space working.</h2><p>One clear view for sites, assets, maintenance, and the people who keep them moving.</p></div>
+      <div class="status-line"><span class="status-dot"></span> Facility operations workspace</div>
+    </section>
+    <section class="form-panel">
+      <div class="form-inner">
+        <div class="kicker">Welcome back</div>
+        <h1>Sign in</h1>
+        <p class="intro">Use your facilities management account to continue.</p>
+    <form method="post" action="/login">
+      <input type="hidden" name="next" value="/">
+      <div class="field"><label for="username">Username</label><input id="username" name="username" autocomplete="username" required autofocus></div>
+      <div class="field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required></div>
+      <button class="submit" type="submit">Sign in <span>→</span></button>
+      <div class="error" role="alert"><!-- LOGIN_ERROR --></div>
+    </form>
+        <div class="security-note"><span class="security-icon">◆</span><span>Your connection is protected. Access is limited to authorized PID Facilities users.</span></div>
+          <div class="contact"><div><strong id="current-date">Today</strong></div><div>Need help? WhatsApp <a href="https://wa.me/27634116900">+27 63 411 6900</a></div></div>
+      </div>
+    </section>
+  </main>
+</body>
+  <script>
+    document.getElementById('current-date').textContent = new Intl.DateTimeFormat('en-ZA', { weekday:'long', day:'numeric', month:'long', year:'numeric' }).format(new Date());
+  </script>
+</html>
